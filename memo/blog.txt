@@ -1,0 +1,21 @@
+img
+
+<img src="../img/2020/1.png" style="width: 100%;" />
+
+C:\xampp\htdocs\cp3\webroot\img\2020\1.png
+
+----------------
+
+code
+
+<pre><code class="prettyprint lang-php">
+
+</pre></code>
+
+上記タグ内では
+「<」を「&lt;」、「>」を「&gt;」と記述
+
+
+
+
+
