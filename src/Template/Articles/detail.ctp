@@ -24,7 +24,7 @@
 
 <body>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="./">Test</a>
+  <a class="navbar-brand" href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'index']); ?>">TC-8</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
       aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -32,20 +32,11 @@
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+        <li class="nav-item">
+        <a class="nav-link" href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'index']); ?>">Home<span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contact</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">Category</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown01">
-            <a class="dropdown-item" href="#">Category#1</a>
-            <a class="dropdown-item" href="#">Category#2</a>
-            <a class="dropdown-item" href="#">Category#3</a>
-          </div>
+        <a class="nav-link" href="<?=$this->Url->build(['controller'=>'Contact', 'action'=>'index']); ?>">Contact</a>
         </li>
       </ul>
     </div>
@@ -53,22 +44,33 @@
 
   <main role="main">
 
-        <div class="jumbotron">
+        <div class="jumbotron jumbotronwhite">
             <div class="container">
                 <i class="fa fa-calendar" aria-hidden="true"></i>
                 <small><?php echo date('Y-m-d',  strtotime($entity->date)); ?></small>
                 <h2><?=$entity->title ?></h3>
                 <br>
                 <?=$entity->content ?>
+
+                <br><br>
+
+                <button type="button" class="btn btn-outline-primary btn-lg">
+                <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>&nbsp;&nbsp; taco-8 on twitter</button>
+                <br><br>
+                <button type="button" class="btn btn-outline-dark btn-lg">
+                <i class="fa fa-github-alt fa-lg" aria-hidden="true"></i>&nbsp;&nbsp; taco-8 on github</button>
+                <br><br>
+                <button type="button" class="btn btn-outline-danger btn-lg">
+                <i class="fa fa-youtube fa-lg" aria-hidden="true"></i>&nbsp;&nbsp; taco-8 on youtube</button>
+
             </div>
         </div> <!-- /container -->
 
     </main>
 
-    <hr>
 
     <footer class="container">
-    <p>&copy; Company 2020</p>
+    <p>&copy; taco-8</p>
     </footer>
 
 <!-- Optional JavaScript -->
