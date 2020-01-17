@@ -32,6 +32,9 @@
         <li class="nav-item">
         <a class="nav-link" href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'index']); ?>">Home<span class="sr-only">(current)</span></a>
         </li>
+        <li class="nav-item">
+        <a class="nav-link" href="<?=$this->Url->build(['controller'=>'About', 'action'=>'index']); ?>">About</a>
+        </li>
         <li class="nav-item active">
         <a class="nav-link" href="<?=$this->Url->build(['controller'=>'Contact', 'action'=>'index']); ?>">Contact</a>
         </li>
@@ -42,7 +45,7 @@
   <main role="main">
 
     <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
+    <div class="jumbotron jumbotronwhite">
       <div class="container">
         <h1 class="display-5">Contact</h1>
         <p>This is a template

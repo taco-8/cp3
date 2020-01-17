@@ -10,7 +10,9 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-  <title>Test</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>TC-8</title>
 
   <!-- Custom styles for this template
   <link href="style.css" rel="stylesheet">
@@ -21,7 +23,7 @@
 
 <body>
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <a class="navbar-brand" href="">Test</a>
+  <a class="navbar-brand" href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'index']); ?>">TC-8</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
       aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -31,6 +33,9 @@
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
           <a class="nav-link" href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'index']); ?>">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<?=$this->Url->build(['controller'=>'About', 'action'=>'index']); ?>">About</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="<?=$this->Url->build(['controller'=>'Contact', 'action'=>'index']); ?>">Contact</a>
@@ -44,22 +49,12 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron">
       <div class="container">
-        <h1 class="display-5">Test</h1>
-        <p>This is a template
-        </p>
-
-        <p><a class="btn btn-secondary" 
-        href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'add']); ?>" 
-        role="button">Add &raquo;</a></p>
-
         <br>
-
         <?=$this->Form->create(null, ['url' => ['controller' => 'Articles', 'action' => 'index'], 'type' => 'post', 
         'class' => 'form-inline my-2 my-lg-0'])?>
-          <input class="form-control mr-sm-2" name="searchwd" value="<?=$searchwd ?>" type="text" placeholder="Search" aria-label="Search">  
-          <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search</button>
+          <input class="form-control mr-sm-2" name="searchwd" value="<?=$searchwd ?>" type="text" placeholder="検索ワードを入力" aria-label="Search">  
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">検索</button>
         <?=$this->Form->end()?>
-
       </div>
     </div>
 
@@ -70,19 +65,24 @@
         <?php foreach($data->toArray() as $obj): ?>
 
             <div class="col-md-4">
-            <small><?php echo date('Y-m-d',  strtotime($obj->date)); ?></small>
-            <h2><?=h($obj->title) ?></h2>
+            <i class="fa fa-calendar" aria-hidden="true"></i><small> <?php echo date('Y-m-d',  strtotime($obj->date)); ?></small>
+            <h3><?=h($obj->title) ?></h3>
             <p><?=h($obj->summary) ?></p>
-            <p><a class="btn btn-secondary" 
+            <p>
+
+            <a class="btn btn-outline-dark" 
+            href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'detail']); ?>?id=<?=h($obj->id) ?>"
+            role="button">続きを読む &raquo;</a>
+            
+            <!---->
+            <a class="btn btn-secondary" 
             href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'edit']); ?>?id=<?=h($obj->id) ?>"
             role="button">Edit &raquo;</a>
             <a class="btn btn-outline-danger" 
             href="javascript:delItem('<?=h($obj->id) ?>');"
             role="button">Delete &raquo;</a>
-            <a class="btn btn-outline-success" 
-            href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'detail']); ?>?id=<?=h($obj->id) ?>"
-            role="button">Detail &raquo;</a>
             
+
             </p><br>
             </div>
 
@@ -102,11 +102,14 @@
 
   </main>
 
-  <hr>
 
-  <footer class="container">
-    <p>&copy; Company 2020</p>
-  </footer>
+
+
+  <!-- -->
+  <p><a class="btn btn-primary" 
+        href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'add']); ?>" 
+        role="button">Add &raquo;</a></p>
+        
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

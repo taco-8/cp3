@@ -13,7 +13,7 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   
-  <title>Test</title>
+  <title><?=$entity->title ?> by taco-8</title>
 
   <!-- Custom styles for this template
   <link href="style.css" rel="stylesheet">
@@ -48,7 +48,7 @@
             <div class="container">
                 <i class="fa fa-calendar" aria-hidden="true"></i>
                 <small><?php echo date('Y-m-d',  strtotime($entity->date)); ?></small>
-                <h2><?=$entity->title ?></h3>
+                <h3><?=$entity->title ?></h3>
                 <br>
                 <?=$entity->content ?>
 

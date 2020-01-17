@@ -7,7 +7,7 @@ use Cake\Datasource\ConnectionManager;
 class ArticlesController extends AppController
 {
     public $paginate = [
-        'limit' => 2,
+        'limit' => 6,
     ];
 
     public $helpers = [
