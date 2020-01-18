@@ -23,11 +23,6 @@ class ArticlesController extends AppController
     public function index()
     {
         $this->viewBuilder()->autoLayout(false);
-        
-        if ($this->request->is('post')) {
-            $searchwd = $this->request->data['searchwd'];
-            $this->request->session()->write('searchwd', $searchwd);
-        }
 
         $searchwd = $this->request->session()->read('searchwd');
         if(isset($searchwd)){
@@ -43,6 +38,14 @@ class ArticlesController extends AppController
         }
 
         $this->set('data', $data);
+    }
+
+    public function search()
+    {
+        $searchwd = $this->request->query['q'];
+        $this->request->session()->write('searchwd', $searchwd);
+
+        return $this->redirect(['action'=>'index']);
     }
 
     public function detail()

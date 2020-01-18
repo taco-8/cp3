@@ -49,16 +49,14 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron jumbotronwhite">
       <div class="container">
-       
-        <?=$this->Form->create(null, ['url' => ['controller' => 'Articles', 'action' => 'index'], 'type' => 'post', 
-        'class' => 'card'])?>
+      
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="検索ワードを入力" name="searchwd" value="<?=$searchwd ?>">
+            <input type="text" class="form-control" placeholder="検索ワードを入力" name="searchwd" id="searchwd" value="<?=$searchwd ?>">
             <div class="input-group-append">
-              <button type="submit" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i> 検索</button>
+              <button type="submit" class="btn btn-dark" onclick="searchItem();"><i class="fa fa-search" aria-hidden="true"></i> 検索</button>
             </div>
           </div>
-        <?=$this->Form->end()?>
+        
       </div>
     </div>
 
@@ -135,6 +133,11 @@
     if(window.confirm('delete?')){
       location.href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'delete']); ?>?id="+id;
     }
+  }
+
+  function searchItem(){
+    var keyword = $("#searchwd").val();
+    location.href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'search']); ?>?q="+keyword;
   }
 
   </script>
