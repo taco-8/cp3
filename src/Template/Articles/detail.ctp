@@ -48,6 +48,7 @@
             <div class="container">
                 <i class="fa fa-calendar" aria-hidden="true"></i>
                 <small><?php echo date('Y-m-d',  strtotime($entity->date)); ?></small>
+                <br><br>
                 <h3><?=$entity->title ?></h3>
                 <br>
                 <?=$entity->content ?>
@@ -62,9 +63,7 @@
     </main>
 
 
-    <footer class="container">
-    <p>&copy; taco-8</p>
-    </footer>
+
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

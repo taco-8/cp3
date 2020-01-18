@@ -49,7 +49,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron jumbotronwhite">
       <div class="container">
-        <br>
+       
         <?=$this->Form->create(null, ['url' => ['controller' => 'Articles', 'action' => 'index'], 'type' => 'post', 
         'class' => 'card'])?>
           <div class="input-group">
@@ -59,7 +59,6 @@
             </div>
           </div>
         <?=$this->Form->end()?>
-
       </div>
     </div>
 
@@ -104,6 +103,8 @@
         <?= $this->Paginator->next('次へ'); ?>
       </ul>
     </nav>
+
+    <br>
 
   </main>
 
