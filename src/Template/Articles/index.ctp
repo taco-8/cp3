@@ -51,7 +51,8 @@
       <div class="container">
       
           <div class="input-group">
-            <input type="text" class="form-control" placeholder="検索ワードを入力" name="searchwd" id="searchwd" value="<?=$searchwd ?>">
+            <input type="text" class="form-control" placeholder="検索ワードを入力" name="searchwd" id="searchwd" value="<?=$searchwd ?>"
+            onkeypress="searchByEnter(event.keyCode);">
             <div class="input-group-append">
               <button type="submit" class="btn btn-dark" onclick="searchItem();"><i class="fa fa-search" aria-hidden="true"></i> 検索</button>
             </div>
@@ -138,6 +139,14 @@
   function searchItem(){
     var keyword = $("#searchwd").val();
     location.href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'search']); ?>?q="+keyword;
+  }
+
+  function searchByEnter(code) {
+    //console.log(code);
+    if(code === 13){
+      var keyword = $("#searchwd").val();
+      location.href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'search']); ?>?q="+keyword;
+    }
   }
 
   </script>
