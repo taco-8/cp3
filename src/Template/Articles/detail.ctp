@@ -54,14 +54,7 @@
 
                 <br><br>
 
-                <button type="button" class="btn btn-outline-primary btn-lg">
-                <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>&nbsp;&nbsp; taco-8 on twitter</button>
-                <br><br>
-                <button type="button" class="btn btn-outline-dark btn-lg">
-                <i class="fa fa-github fa-lg" aria-hidden="true"></i>&nbsp;&nbsp; taco-8 on github</button>
-                <br><br>
-                <button type="button" class="btn btn-outline-danger btn-lg">
-                <i class="fa fa-youtube fa-lg" aria-hidden="true"></i>&nbsp;&nbsp; taco-8 on youtube</button>
+
 
             </div>
         </div> <!-- /container -->

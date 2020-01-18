@@ -55,7 +55,7 @@
           <div class="input-group">
             <input type="text" class="form-control" placeholder="検索ワードを入力" name="searchwd" value="<?=$searchwd ?>">
             <div class="input-group-append">
-              <button type="submit" class="btn btn-secondary"><i class="fa fa-search" aria-hidden="true"></i> 検索</button>
+              <button type="submit" class="btn btn-dark"><i class="fa fa-search" aria-hidden="true"></i> 検索</button>
             </div>
           </div>
         <?=$this->Form->end()?>
@@ -79,14 +79,14 @@
             href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'detail']); ?>?id=<?=h($obj->id) ?>"
             role="button">続きを読む &raquo;</a>
             
-            <!---->
+            <!--
             <a class="btn btn-secondary" 
             href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'edit']); ?>?id=<?=h($obj->id) ?>"
             role="button">Edit &raquo;</a>
             <a class="btn btn-outline-danger" 
             href="javascript:delItem('<?=h($obj->id) ?>');"
             role="button">Delete &raquo;</a>
-            
+            -->
 
             </p><br>
             </div>
@@ -110,11 +110,11 @@
 
 
 
-  <!-- -->
+  <!-- 
   <p><a class="btn btn-primary" 
         href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'add']); ?>" 
         role="button">Add &raquo;</a></p>
-        
+        -->
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
