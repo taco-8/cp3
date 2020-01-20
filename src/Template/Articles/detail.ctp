@@ -58,7 +58,9 @@
 
                 <br><br>
 
-
+                <a class="btn btn-outline-dark" 
+                  href="javascript:history.back();"
+                  role="button">&laquo; 一覧に戻る</a>
 
             </div>
         </div> <!-- /container -->
