@@ -67,6 +67,11 @@ class ArticlesController extends AppController
 
     public function edit()
     {
+        $adminflg = $this->request->session()->read('adminflg');
+        if($adminflg!='u1'){
+            return $this->redirect(['action'=>'index']);
+        }
+
         $this->viewBuilder()->autoLayout(false);
         $id = $this->request->query['id'];
         $entity = $this->Articles->get($id);
@@ -75,6 +80,11 @@ class ArticlesController extends AppController
 
     public function delete()
     {
+        $adminflg = $this->request->session()->read('adminflg');
+        if($adminflg!='u1'){
+            return $this->redirect(['action'=>'index']);
+        }
+
         $id = $this->request->query['id'];
         $entity = $this->Articles->get($id);
         $this->set('entity', $entity);
@@ -84,6 +94,11 @@ class ArticlesController extends AppController
     
     public function add()
     {
+        $adminflg = $this->request->session()->read('adminflg');
+        if($adminflg!='u1'){
+            return $this->redirect(['action'=>'index']);
+        }
+
         $this->viewBuilder()->autoLayout(false);
         $entity = $this->Articles->newEntity();
 
@@ -107,6 +122,11 @@ class ArticlesController extends AppController
 
     public function update()
     {
+        $adminflg = $this->request->session()->read('adminflg');
+        if($adminflg!='u1'){
+            return $this->redirect(['action'=>'index']);
+        }
+
         if ($this->request->is('post')) {
             $data = $this->request->data['Articles'];
             $entity = $this->Articles->get($data['id']);
