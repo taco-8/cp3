@@ -38,23 +38,24 @@
 
   </head>
   <body>
-    <form class="form-signin">
-  <div class="text-center mb-4">
 
-    <h1 class="h3 mb-3 font-weight-normal">login test</h1>
-    
-    <!--
-    <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p>
-    -->
-  </div>
+    <?=$this->Form->create(null, ['url' => ['controller' => 'Admin', 'action' => 'index'], 'type' => 'post', 'class' => 'form-signin'])?>
+      <div class="text-center mb-4">
 
-  <div class="form-label-group">
-    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required autofocus>
-    <label for="inputPassword">Password</label>
-  </div>
+        <h1 class="h3 mb-3 font-weight-normal">login test</h1>
+        
+        <!--
+        <p>Build form controls with floating labels via the <code>:placeholder-shown</code> pseudo-element. <a href="https://caniuse.com/#feat=css-placeholder-shown">Works in latest Chrome, Safari, and Firefox.</a></p>
+        -->
+      </div>
 
-  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-  <p class="mt-5 mb-3 text-muted text-center">&copy; taco-8</p>
-</form>
+    <div class="form-label-group">
+      <input type="password" id="inputPassword" class="form-control" name="pw" placeholder="Password" required autofocus>
+      <label for="inputPassword">Password</label>
+    </div>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+    <p class="mt-5 mb-3 text-muted text-center">&copy; taco-8</p>
+  <?=$this->Form->end()?>
 </body>
 </html>

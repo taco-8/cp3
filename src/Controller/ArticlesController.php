@@ -24,6 +24,9 @@ class ArticlesController extends AppController
     {
         $this->viewBuilder()->autoLayout(false);
 
+        $adminflg = $this->request->session()->read('adminflg');
+        $this->set('adminflg', $adminflg);
+
         $searchwd = $this->request->session()->read('searchwd');
         if(isset($searchwd)){
             $data = $this->paginate($this->Articles->find()

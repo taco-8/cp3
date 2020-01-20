@@ -10,8 +10,13 @@ class AdminController extends AppController
     {
         $this->viewBuilder()->autoLayout(false);
 
-        
-
+        if ($this->request->is('post')) {
+            $pw = $this->request->data['pw'];
+            if($pw=="test"){
+                $this->request->session()->write('adminflg', 'u1');
+                return $this->redirect(['controller'=>'Articles', 'action'=>'index']);
+            }
+        }
     }
 
 
