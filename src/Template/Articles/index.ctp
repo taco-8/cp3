@@ -77,14 +77,14 @@
             href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'detail']); ?>?id=<?=h($obj->id) ?>"
             role="button">続きを読む &raquo;</a>
             
-            <!--
-            <a class="btn btn-secondary" 
-            href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'edit']); ?>?id=<?=h($obj->id) ?>"
-            role="button">Edit &raquo;</a>
-            <a class="btn btn-outline-danger" 
-            href="javascript:delItem('<?=h($obj->id) ?>');"
-            role="button">Delete &raquo;</a>
-            -->
+            <?php if($adminflg=='u1'): ?>
+              <a class="btn btn-outline-secondary" 
+              href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'edit']); ?>?id=<?=h($obj->id) ?>"
+              role="button">Edit &raquo;</a>
+              <a class="btn btn-outline-danger" 
+              href="javascript:delItem('<?=h($obj->id) ?>');"
+              role="button">Delete &raquo;</a>
+            <?php endif; ?>
 
             </p><br>
             </div>
@@ -108,13 +108,17 @@
   </main>
 
 
+  <?php if($adminflg=='u1'): ?>
 
+    <p><a class="btn btn-outline-primary" 
+          href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'add']); ?>" 
+          role="button">add &raquo;</a></p>
 
-  <!-- 
-  <p><a class="btn btn-primary" 
-        href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'add']); ?>" 
-        role="button">Add &raquo;</a></p>
-        -->
+    <p><a class="btn btn-outline-primary" 
+          href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'logout']); ?>" 
+          role="button">logout &raquo;</a></p>
+
+  <?php endif; ?>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->

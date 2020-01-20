@@ -43,6 +43,12 @@ class ArticlesController extends AppController
         $this->set('data', $data);
     }
 
+    public function logout()
+    {
+        $this->request->session()->write('adminflg', null);
+        return $this->redirect(['action'=>'index']);
+    }
+
     public function search()
     {
         $searchwd = $this->request->query['q'];
