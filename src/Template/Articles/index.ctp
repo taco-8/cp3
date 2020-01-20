@@ -97,9 +97,9 @@
 
     <nav aria-label="Page navigation">
       <ul class="pagination justify-content-center">
-        <?= $this->Paginator->prev('前へ'); ?>
-        <?= $this->Paginator->numbers(array('modulus' => '3')); ?>
-        <?= $this->Paginator->next('次へ'); ?>
+        <?= $this->Paginator->first('«'); ?>
+        <?= $this->Paginator->numbers(array('modulus' => '4')); ?>
+        <?= $this->Paginator->last('»'); ?>
       </ul>
     </nav>
 
