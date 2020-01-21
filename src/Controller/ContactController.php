@@ -11,18 +11,29 @@ class ContactController extends AppController
     {
         $this->viewBuilder()->autoLayout(false);
 
-        //send mail start
-        $email = new Email('default');
-        $frommailadd = "info@xxxxx.com";
-        $tomailadd = "to@mailadd.com";
-        $mailsubject = "this is mail subject";
-        $message = "Hello!\r\n"
-                    ."This is TEST MAIL.";
-		$email->setFrom($frommailadd)
-			->setTo($tomailadd)
-			->setSubject($mailsubject)
-            ->send($message);
-        //send mail end
+        if ($this->request->is('post')) {
+            $name = $this->request->data['name'];
+            $mailadd = $this->request->data['email'];
+            $content = $this->request->data['content'];
+
+            //send mail start
+            /*
+            $email = new Email('default');
+            $frommailadd = "info@xxxxx.com";
+            $tomailadd = "to@mailadd.com";
+            $mailsubject = "this is mail subject";
+            $message = "name:\r\n".$name
+                    ."\r\n"
+                    ."\r\nemail:\r\n".$mailadd
+                    ."\r\n"
+                    ."\r\ncontent:\r\n".$content;
+            $email->setFrom($frommailadd)
+                ->setTo($tomailadd)
+                ->setSubject($mailsubject)
+                ->send($message);
+                */
+            //send mail end
+        }
 
     }
 
