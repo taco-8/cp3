@@ -12,10 +12,17 @@ class ContactController extends AppController
         $this->viewBuilder()->autoLayout(false);
 
         $this->set('submitflg', '');
+        $this->set('reqcontent', '');
         if ($this->request->is('post')) {
             $name = $this->request->data['name'];
             $mailadd = $this->request->data['email'];
             $content = $this->request->data['content'];
+
+            if($content==''){
+                $this->set('reqcontent', '必須入力です');
+                return;
+            }
+
             $this->set('submitflg', 'post');
 
             //send mail start
@@ -35,6 +42,7 @@ class ContactController extends AppController
                 ->send($message);
                 */
             //send mail end
+
         }
 
     }

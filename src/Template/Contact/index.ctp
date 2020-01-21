@@ -72,11 +72,18 @@
 
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">content</label>
-                        
+
+                        <?php if($reqcontent==''): ?>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="content"></textarea>
+                        <?php else: ?>
+                          <textarea class="form-control is-invalid" id="exampleFormControlTextarea1" rows="3" name="content"></textarea>
+                          <div class="invalid-feedback">
+                            <?=h($reqcontent) ?>
+                          </div>
+                        <?php endif; ?>
 
                     </div>
-
+                    
                     <button type="submit" class="btn btn-secondary">send</button>
 
                 <?=$this->Form->end()?>
