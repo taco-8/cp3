@@ -18,3 +18,8 @@ body {
     background-color: #FFFFFF;
     margin-bottom: 0rem;
   }
+
+  .form_conf {
+    display: flex;
+    justify-content: space-between;
+  }

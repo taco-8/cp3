@@ -58,9 +58,17 @@
 
                 <br><br>
 
+                <div class="form_conf">
+
                 <a class="btn btn-outline-dark" 
-                  href="javascript:history.back();"
-                  role="button">&laquo; 一覧に戻る</a>
+                    href="javascript:history.back();"
+                    role="button">&laquo; 一覧に戻る</a>
+                
+                  <a class="btn btn-outline-dark" 
+                    href="<?=$this->Url->build(['controller'=>'Contact', 'action'=>'index']); ?>?id=<?=h($entity->id) ?>"
+                    role="button">コメント &raquo;</a>
+
+                </div>
 
             </div>
         </div> <!-- /container -->
