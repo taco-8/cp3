@@ -106,14 +106,17 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
-  
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
   <script>
 
   $(function(){
     const submitflg = "<?=h($submitflg) ?>";
     if(submitflg==='post'){
-      alert('送信完了');
-      location.href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'index']); ?>";
+      swal("test1", "test2", "success")
+      .then((value) => {
+        location.href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'index']); ?>";
+      });
     }
   });
 
