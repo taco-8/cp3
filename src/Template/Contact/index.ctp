@@ -109,11 +109,13 @@
   
   <script>
 
-  function delItem(id){
-    if(window.confirm('delete?')){
-      location.href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'delete']); ?>?id="+id;
+  $(function(){
+    const submitflg = "<?=h($submitflg) ?>";
+    if(submitflg==='post'){
+      alert('送信完了');
+      location.href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'index']); ?>";
     }
-  }
+  });
 
   </script>
 

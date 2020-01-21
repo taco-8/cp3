@@ -11,10 +11,12 @@ class ContactController extends AppController
     {
         $this->viewBuilder()->autoLayout(false);
 
+        $this->set('submitflg', '');
         if ($this->request->is('post')) {
             $name = $this->request->data['name'];
             $mailadd = $this->request->data['email'];
             $content = $this->request->data['content'];
+            $this->set('submitflg', 'post');
 
             //send mail start
             /*
