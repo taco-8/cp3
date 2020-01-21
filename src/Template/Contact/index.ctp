@@ -64,9 +64,7 @@
                     <div class="form-group">
                         <label for="exampleFormControlInput2">email</label>
                         
-
                         <input type="text" class="form-control" id="exampleFormControlInput2" name="email" value="">
-
 
                     </div>
 
