@@ -13,7 +13,7 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   
-  <title><?=$entity->title ?> by taco-8</title>
+  <title><?=$entity->title ?> - taco-8</title>
 
   <!-- Custom styles for this template
   <link href="style.css" rel="stylesheet">

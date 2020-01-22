@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-  <title>Contact</title>
+  <title>taco-8へコメント</title>
 
   <!-- Custom styles for this template
   <link href="style.css" rel="stylesheet">
@@ -47,29 +47,29 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron jumbotronwhite">
       <div class="container">
-        <h1 class="display-5">Contact</h1>
-        <p>This is a template
-        </p>
+        <h1 class="display-5">コメント</h1><br>
+        <p>コメントを入力して送信ボタンをクリックしてください
+        </p><br>
 
  
                  <?=$this->Form->create(null, ['url' => ['controller' => 'contact', 'action' => 'index'], 'type' => 'post'])?>
                     
                     <div class="form-group">
-                        <label for="exampleFormControlInput1">name</label>
+                        <label for="exampleFormControlInput1">お名前</label>
 
                             <input type="text" class="form-control" id="exampleFormControlInput1" name="name" value="">
 
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleFormControlInput2">email</label>
+                        <label for="exampleFormControlInput2">メールアドレス</label>
                         
                         <input type="text" class="form-control" id="exampleFormControlInput2" name="email" value="">
 
                     </div>
 
                     <div class="form-group">
-                        <label for="exampleFormControlTextarea1">content</label>
+                        <label for="exampleFormControlTextarea1">コメント</label>
 
                         <?php if($reqcontent==''): ?>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="content"></textarea>
@@ -81,8 +81,8 @@
                         <?php endif; ?>
 
                     </div>
-                    
-                    <button type="submit" class="btn btn-secondary">send</button>
+                    <br>
+                    <button type="submit" class="btn btn-outline-dark">送信</button>
 
                 <?=$this->Form->end()?>
 
@@ -94,11 +94,7 @@
 
   </main>
 
-  <hr>
 
-  <footer class="container">
-    <p>&copy; Company 2020</p>
-  </footer>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -118,7 +114,7 @@
   $(function(){
     const submitflg = "<?=h($submitflg) ?>";
     if(submitflg==='post'){
-      swal("test1", "test2", "success")
+      swal("送信完了です", "ありがとうございました", "success")
       .then((value) => {
         location.href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'index']); ?>";
       });

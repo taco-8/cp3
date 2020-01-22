@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <title>TC-8</title>
+  <title>taco-8</title>
 
   <!-- Custom styles for this template
   <link href="style.css" rel="stylesheet">

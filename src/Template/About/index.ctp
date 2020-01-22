@@ -12,7 +12,7 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <title>About</title>
+  <title>taco-8について</title>
 
   <!-- Custom styles for this template
   <link href="style.css" rel="stylesheet">
@@ -49,20 +49,22 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron jumbotronwhite">
       <div class="container">
-        <h1 class="display-5">About</h1>
+        <h1 class="display-5">taco-8について</h1>
         <br>
         <p>taco-8.comでは、ゲーム、プログラミング、音楽、トレンド、ライフスタイルなどを発信しています。
         </p>
         <br>
 
-        <button type="button" class="btn btn-outline-primary btn-lg">
+        <!-- <button type="button" class="btn btn-outline-primary btn-lg" onclick='location.href="https://twitter.com/taco8blog";'>
         <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>&nbsp;&nbsp; taco-8 on twitter</button>
         <br><br>
-        <button type="button" class="btn btn-outline-dark btn-lg">
+
+        <button type="button" class="btn btn-outline-dark btn-lg" onclick='location.href="https://github.com/taco-8";'>
         <i class="fa fa-github fa-lg" aria-hidden="true"></i>&nbsp;&nbsp; taco-8 on github</button>
         <br><br>
-        <button type="button" class="btn btn-outline-danger btn-lg">
-        <i class="fa fa-youtube fa-lg" aria-hidden="true"></i>&nbsp;&nbsp; taco-8 on youtube</button>
+
+        <button type="button" class="btn btn-outline-danger btn-lg" onclick='location.href="https://www.youtube.com/channel/UC8THvy3ecXu20emwkJpC_2w";'>
+        <i class="fa fa-youtube fa-lg" aria-hidden="true"></i>&nbsp;&nbsp; taco-8 on youtube</button> -->
             
 
       </div>
@@ -86,15 +88,5 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
   
-  <script>
-
-  function delItem(id){
-    if(window.confirm('delete?')){
-      location.href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'delete']); ?>?id="+id;
-    }
-  }
-
-  </script>
-
 </body>
 </html>

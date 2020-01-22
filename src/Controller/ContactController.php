@@ -19,7 +19,7 @@ class ContactController extends AppController
             $content = $this->request->data['content'];
 
             if($content==''){
-                $this->set('reqcontent', '必須入力です');
+                $this->set('reqcontent', 'コメントを入力してください');
                 return;
             }
 
@@ -28,14 +28,14 @@ class ContactController extends AppController
             //send mail start
             /*
             $email = new Email('default');
-            $frommailadd = "info@xxxxx.com";
+            $frommailadd = "info@taco-8.com";
             $tomailadd = "to@mailadd.com";
-            $mailsubject = "this is mail subject";
-            $message = "name:\r\n".$name
+            $mailsubject = "taco-8.comへのコメントです;
+            $message = "名前:\r\n".$name
                     ."\r\n"
-                    ."\r\nemail:\r\n".$mailadd
+                    ."\r\nメール:\r\n".$mailadd
                     ."\r\n"
-                    ."\r\ncontent:\r\n".$content;
+                    ."\r\nコメント:\r\n".$content;
             $email->setFrom($frommailadd)
                 ->setTo($tomailadd)
                 ->setSubject($mailsubject)
