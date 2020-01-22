@@ -142,7 +142,8 @@ class ArticlesController extends AppController
             $entity = $this->Articles->get($data['id']);
             $this->Articles->patchEntity($entity, $data);
             $this->Articles->save($entity);
+            return $this->redirect(['controller'=>'Articles', 'action'=>'edit', '?'=>array('id' => $data['id'])]);
         }
-        return $this->redirect(['action'=>'index']);
+        //return $this->redirect(['action'=>'index']);
     }
 }
