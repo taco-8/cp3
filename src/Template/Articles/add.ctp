@@ -75,12 +75,12 @@
                         <label for="exampleFormControlTextarea2">Summary</label>
                         
                         <?php if($this->Form->error('Articles.summary')): ?>
-                            <textarea class="form-control is-invalid" id="exampleFormControlTextarea2" rows="3" name="Articles[summary]"><?=$entity->errsummary ?></textarea>
+                            <textarea class="form-control is-invalid" id="exampleFormControlTextarea2" rows="2" name="Articles[summary]"><?=$entity->errsummary ?></textarea>
                             <div class="invalid-feedback">
                                 <?=$this->Form->error('Articles.summary') ?>
                             </div>
                         <?php else: ?>
-                            <textarea class="form-control" id="exampleFormControlTextarea2" rows="3" name="Articles[summary]"><?=$entity->summary ?></textarea>
+                            <textarea class="form-control" id="exampleFormControlTextarea2" rows="2" name="Articles[summary]"><?=$entity->summary ?></textarea>
                         <?php endif; ?>
 
                     </div>
@@ -89,12 +89,12 @@
                         <label for="exampleFormControlTextarea1">Content</label>
                         
                         <?php if($this->Form->error('Articles.content')): ?>
-                            <textarea class="form-control is-invalid" id="exampleFormControlTextarea1" rows="3" name="Articles[content]"><?=$entity->errcontent ?></textarea>
+                            <textarea class="form-control is-invalid" id="exampleFormControlTextarea1" rows="6" name="Articles[content]"><?=$entity->errcontent ?></textarea>
                             <div class="invalid-feedback">
                                 <?=$this->Form->error('Articles.content') ?>
                             </div>
                         <?php else: ?>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="Articles[content]"><?=$entity->content ?></textarea>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" name="Articles[content]"><?=$entity->content ?></textarea>
                         <?php endif; ?>
 
                     </div>
