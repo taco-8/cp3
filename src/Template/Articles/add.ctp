@@ -92,7 +92,7 @@
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" name="Articles[content]"><?=$entity->content ?></textarea>
                             <script>
                                   CKEDITOR.replace( 'Articles[content]' );
-                          </script>
+                            </script>
                     </div>
 
                     <button type="submit" class="btn btn-secondary">Add</button>

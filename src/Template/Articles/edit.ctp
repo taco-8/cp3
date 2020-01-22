@@ -17,6 +17,7 @@
   <link href="style.css" rel="stylesheet">
 　-->
   <?= $this->Html->css('bs.css') ?>
+  <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
 
 </head>
 
@@ -69,6 +70,10 @@
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Content</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" name="Articles[content]"><?=$entity->content ?></textarea>
+                            <script>
+                                  CKEDITOR.replace( 'Articles[content]' );
+                            </script>
+
                     </div>
 
                     <?=$this->Form->hidden('Articles.id') ?>

@@ -8,9 +8,9 @@ C:\xampp\htdocs\cp3\webroot\img\2020\1.png
 
 code
 
-<pre><code class="prettyprint lang-php">
+<pre class="prettyprint lang-php">
 
-</pre></code>
+</pre>
 
 上記タグ内では
 「<」を「&lt;」、「>」を「&gt;」と記述
