@@ -68,7 +68,7 @@
 
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Content</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" name="Articles[content]"><?=$entity->content ?></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" name="Articles[content]"><?=htmlentities($entity->content) ?></textarea>
                     </div>
 
                     <?=$this->Form->hidden('Articles.id') ?>
