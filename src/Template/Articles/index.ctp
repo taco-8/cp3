@@ -115,6 +115,10 @@
           role="button">add &raquo;</a></p>
 
     <p><a class="btn btn-outline-primary" 
+          href="<?=$this->Url->build(['controller'=>'Escape', 'action'=>'index']); ?>" 
+          role="button">escape &raquo;</a></p>
+
+    <p><a class="btn btn-outline-primary" 
           href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'logout']); ?>" 
           role="button">logout &raquo;</a></p>
 
