@@ -52,7 +52,7 @@
                 <i class="fa fa-calendar" aria-hidden="true"></i>
                 <small><?php echo date('Y-m-d',  strtotime($entity->date)); ?></small>
                 <br><br>
-                <h3><?=$entity->title ?></h3>
+                <h1 class='htitle'><?=$entity->title ?></h1>
                 <br>
                 <?=$entity->content ?>
 

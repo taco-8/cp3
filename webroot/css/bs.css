@@ -24,3 +24,7 @@ body {
     display: flex;
     justify-content: space-between;
   }
+
+  .htitle {
+    font-size: 1.75rem;
+  }
