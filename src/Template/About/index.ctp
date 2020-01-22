@@ -49,8 +49,8 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron jumbotronwhite">
       <div class="container">
-        <h1 class="display-5">taco-8について</h1>
-        <br>
+        <!-- <h1 class="display-5">taco-8について</h1><br> -->
+        
         <p>taco-8.comでは、ゲーム、プログラミング、音楽、トレンド、ライフスタイルなどを発信しています。
         </p>
         <br>

@@ -47,7 +47,7 @@
     <!-- Main jumbotron for a primary marketing message or call to action -->
     <div class="jumbotron jumbotronwhite">
       <div class="container">
-        <h1 class="display-5">コメント</h1><br>
+        <!-- <h1 class="display-5">コメント</h1><br> -->
         <p>コメントを入力して送信ボタンをクリックしてください
         </p><br>
 
