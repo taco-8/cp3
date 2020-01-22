@@ -106,6 +106,16 @@ class ArticlesController extends AppController
             $data = $this->request->data['Articles'];
             $entity = $this->Articles->newEntity($data);
             $entity->date = date("Y-m-d");
+
+            //新規登録時には改行コード<br />を追加
+            $str1 = $entity->content;
+            $order1   = array("\r\n", "\n", "\r");
+            $replace1 = '<br />';
+            $str2 = str_replace($order1, $replace1, $str1);
+            $order2   = array("<br />");
+            $replace2 = '<br />'."\n";
+            $entity->content = str_replace($order2, $replace2, $str2);
+
             if ($this->Articles->save($entity)) {
                 $this->request->session()->write('searchwd', null);
                 return $this->redirect(['action'=>'index']);
