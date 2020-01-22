@@ -17,6 +17,7 @@ body {
   .jumbotronwhite {
     background-color: #FFFFFF;
     margin-bottom: 0rem;
+    word-break: break-all;
   }
 
   .form_conf {
