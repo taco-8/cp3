@@ -106,15 +106,18 @@ class ArticlesController extends AppController
             $data = $this->request->data['Articles'];
             $entity = $this->Articles->newEntity($data);
             $entity->date = date("Y-m-d");
-            if ($this->Articles->save($entity)) {
-                $this->request->session()->write('searchwd', null);
-                return $this->redirect(['action'=>'index']);
-            } else {
-                //validationエラーが発生した場合も入力欄に入力内容を反映させる
-                $entity->errtitle = $data['title'];
-                $entity->errsummary = $data['summary'];
-                $entity->errcontent = $data['content'];
-            }
+
+            echo $entity->content;
+
+            // if ($this->Articles->save($entity)) {
+            //     $this->request->session()->write('searchwd', null);
+            //     return $this->redirect(['action'=>'index']);
+            // } else {
+            //     //validationエラーが発生した場合も入力欄に入力内容を反映させる
+            //     $entity->errtitle = $data['title'];
+            //     $entity->errsummary = $data['summary'];
+            //     $entity->errcontent = $data['content'];
+            // }
         }
 
         $this->set('entity', $entity);

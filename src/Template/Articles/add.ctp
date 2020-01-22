@@ -89,16 +89,14 @@
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Content</label>
                         
-                        <?php if($this->Form->error('Articles.content')): ?>
-                            <textarea class="form-control is-invalid" id="exampleFormControlTextarea1" rows="6" name="Articles[content]"><?=$entity->errcontent ?></textarea>
-                            <div class="invalid-feedback">
-                                <?=$this->Form->error('Articles.content') ?>
-                            </div>
-                        <?php else: ?>
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" name="Articles[content]"><?=$entity->content ?></textarea>
-                        <?php endif; ?>
+     
+                            <!-- <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" name="Articles[content]"><?=$entity->content ?></textarea> -->
+                            <input id="x1" type="hidden" name="Articles[content]" value="<?=$entity->content ?>">
+                    <trix-editor input="x1"></trix-editor>
 
                     </div>
+
+
 
                     <button type="submit" class="btn btn-secondary">Add</button>
 
