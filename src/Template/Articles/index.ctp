@@ -69,7 +69,7 @@
 
             <div class="col-md-4">
             <i class="fa fa-calendar" aria-hidden="true"></i><small> <?php echo date('Y-m-d',  strtotime($obj->date)); ?></small>
-            <h1 class='htitle'><?=h($obj->title) ?></h1>
+            <h3><?=h($obj->title) ?></h3>
             <p><?=h($obj->summary) ?></p>
             <p>
 
