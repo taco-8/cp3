@@ -17,6 +17,7 @@
   <link href="style.css" rel="stylesheet">
 　-->
   <?= $this->Html->css('bs.css') ?>
+  <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>
 
 </head>
 
@@ -88,15 +89,10 @@
                     <div class="form-group">
                         <label for="exampleFormControlTextarea1">Content</label>
                         
-                        <?php if($this->Form->error('Articles.content')): ?>
-                            <textarea class="form-control is-invalid" id="exampleFormControlTextarea1" rows="6" name="Articles[content]"><?=$entity->errcontent ?></textarea>
-                            <div class="invalid-feedback">
-                                <?=$this->Form->error('Articles.content') ?>
-                            </div>
-                        <?php else: ?>
                             <textarea class="form-control" id="exampleFormControlTextarea1" rows="6" name="Articles[content]"><?=$entity->content ?></textarea>
-                        <?php endif; ?>
-
+                            <script>
+                                  CKEDITOR.replace( 'Articles[content]' );
+                          </script>
                     </div>
 
                     <button type="submit" class="btn btn-secondary">Add</button>
@@ -125,5 +121,6 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
   integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
   crossorigin="anonymous"></script>
+
 </body>
 </html>
