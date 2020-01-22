@@ -30,7 +30,7 @@ class ContactController extends AppController
             $email = new Email('default');
             $frommailadd = "info@taco-8.com";
             $tomailadd = "to@mailadd.com";
-            $mailsubject = "taco-8.comへのコメントです;
+            $mailsubject = "taco-8.comへのコメントです";
             $message = "名前:\r\n".$name
                     ."\r\n"
                     ."\r\nメール:\r\n".$mailadd
