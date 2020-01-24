@@ -74,7 +74,7 @@
             <p>
 
             <a class="btn btn-outline-dark" 
-            href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'detail']); ?>?id=<?=h($obj->id) ?>"
+            href="<?=$this->Url->build(['controller'=>'Articles', 'action'=>'detail']); ?>/<?=h($obj->id) ?>"
             role="button">続きを読む &raquo;</a>
             
             <?php if($adminflg=='u1'): ?>

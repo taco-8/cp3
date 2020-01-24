@@ -57,10 +57,10 @@ class ArticlesController extends AppController
         return $this->redirect(['action'=>'index']);
     }
 
-    public function detail()
+    public function detail($id)
     {
         $this->viewBuilder()->autoLayout(false);
-        $id = $this->request->query['id'];
+        // $id = $this->request->query['id'];
         $entity = $this->Articles->get($id);
         $this->set('entity', $entity);
     } 
