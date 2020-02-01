@@ -50,7 +50,11 @@
         <div class="jumbotron jumbotronwhite">
             <div class="container">
 
-            <h1 class='htitle'><?=$ip ?></h1>
+            <p>IPアドレス<br />
+            <?=$ip ?></p>
+            <br />
+            <p>リモートホスト<br />
+            <?=$host ?></p>
                
             </div>
         </div> <!-- /container -->
