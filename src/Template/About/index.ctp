@@ -55,6 +55,11 @@
         </p>
         <br>
 
+        <a href="<?=$this->Url->build(['controller'=>'Ip', 'action'=>'index']); ?>">
+        <button type="button" class="btn btn-outline-dark btn-lg">
+        グローバルIPの確認</button></a>
+        <br><br>
+
         <!-- <button type="button" class="btn btn-outline-primary btn-lg" onclick='location.href="https://twitter.com/taco8blog";'>
         <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>&nbsp;&nbsp; taco-8 on twitter</button>
         <br><br>
@@ -64,7 +69,7 @@
         <br><br>
 
         <button type="button" class="btn btn-outline-danger btn-lg" onclick='location.href="https://www.youtube.com/channel/UC8THvy3ecXu20emwkJpC_2w";'>
-        <i class="fa fa-youtube fa-lg" aria-hidden="true"></i>&nbsp;&nbsp; taco-8 on youtube</button> -->
+        <i class="fa fa-youtube fa-lg" aria-hidden="true"></i>&nbsp;&nbsp; taco-8 on youtube</button>  -->
             
 
       </div>
