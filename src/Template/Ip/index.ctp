@@ -51,9 +51,9 @@
             <div class="container">
 
             <p>IPアドレス<br />
-            <?=$ip ?></p>
-            <br />
-            <p>リモートホスト<br />
+            <?=$ip ?>
+            <br /><br />
+            リモートホスト<br />
             <?=$host ?></p>
                
             </div>
