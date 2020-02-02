@@ -61,6 +61,11 @@
         グローバルIPの確認</button></a>
         <br><br>
 
+        <a href="<?=$this->Url->build(['controller'=>'Year', 'action'=>'index']); ?>">
+        <button type="button" class="btn btn-outline-dark">
+        西暦和暦リスト</button></a>
+        <br><br>
+
         <!-- <button type="button" class="btn btn-outline-primary btn-lg" onclick='location.href="https://twitter.com/taco8blog";'>
         <i class="fa fa-twitter fa-lg" aria-hidden="true"></i>&nbsp;&nbsp; taco-8 on twitter</button>
         <br><br>
