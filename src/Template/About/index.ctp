@@ -54,7 +54,7 @@
         <p>taco-8.comでは、ゲーム、プログラミング、音楽、トレンド、ライフスタイルなどを発信しています。
         </p>
         <p>自作のツールは以下で公開しています。
-        </p>
+        </p><br>
 
         <a href="<?=$this->Url->build(['controller'=>'Ip', 'action'=>'index']); ?>">
         <button type="button" class="btn btn-outline-dark">
