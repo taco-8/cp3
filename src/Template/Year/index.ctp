@@ -53,7 +53,7 @@
                 <div class="form-group">
                     <label for="year" class="control-label col-xs-2">西暦和暦リスト</label>
                     <div class="col-xs-3">
-                    <select class="form-control" id="year" name="year">
+                    <select class="form-control" id="year" name="year" onChange="chyear();">
 
                     <?php
                         foreach($selectyearlist as $k => $v ){
@@ -68,9 +68,9 @@
                     </select>
                     </div>
                 </div>
+                <br>
+                <p id="ename"></p>
 
-
-   
             </div>
         </div> <!-- /container -->
 
@@ -90,5 +90,24 @@
   crossorigin="anonymous"></script>
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js">
 </script>
+
+<script>
+
+$(function(){
+  chyear();
+});
+
+function chyear(){
+  var year = $('[name=year]').val();
+  document.getElementById("ename").innerHTML = toEto(year);
+}
+
+function toEto(year) {
+  var eto =  ["申(サル)","酉(ニワトリ)","戌(イヌ)","亥(イノシシ)","子(ネズミ)","丑(ウシ)","寅(トラ)","卯(ウサギ)","辰(リュウ)","巳(ヘビ)","午(ウマ)","未(ヒツジ)"];
+  return eto[year % 12];
+}
+
+</script>
+
 </body>
 </html>
