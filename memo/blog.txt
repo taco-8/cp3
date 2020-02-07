@@ -19,3 +19,9 @@ code
 
 /cp3/escape
 
+---------------
+
+次に投稿する記事番号をnに変更したい場合
+ALTER TABLE articles AUTO_INCREMENT=n;
+
+
