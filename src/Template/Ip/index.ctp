@@ -20,6 +20,9 @@
 　-->
   <?= $this->Html->css('bs.css') ?>
 
+  <!-- Google AdSense -->
+  <script data-ad-client="ca-pub-4290557883423566" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 </head>
 
 <body>
