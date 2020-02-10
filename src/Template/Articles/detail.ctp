@@ -64,7 +64,7 @@
                 <div class="form_conf">
 
                 <a class="btn btn-outline-dark" 
-                    href="javascript:history.back();"
+                    href="javascript:back();"
                     role="button">&laquo; 一覧に戻る</a>
                 
                   <a class="btn btn-outline-dark" 
@@ -94,5 +94,18 @@
   crossorigin="anonymous"></script>
 <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js">
 </script>
+
+<script>
+function back(){
+  var ref = document.referrer;
+  var url = "<?=$this->Url->build(['controller'=>'Articles', 'action'=>'index']); ?>"
+  if ( ref.indexOf(url) != -1) {
+    history.back(); 
+  }else{
+    location.href = url;
+  }
+}
+</script>
+
 </body>
 </html>
