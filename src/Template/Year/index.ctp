@@ -71,6 +71,13 @@
                 <br>
                 <p id="ename"></p>
 
+
+                <div id='resetbtn' style='display:none;'>
+                <button type="button" class="btn btn-outline-dark" onclick='reload();'>
+                今年</button>
+                <div>
+
+
             </div>
         </div> <!-- /container -->
 
@@ -97,9 +104,21 @@ $(function(){
   chyear();
 });
 
+function reload(){
+  location.reload();
+}
+
 function chyear(){
   var year = $('[name=year]').val();
   document.getElementById("ename").innerHTML = toEto(year);
+
+  var cyear = '<?=$currentyear ?>';
+  if(year != cyear){
+    document.getElementById("resetbtn").style.display="block";
+  }else{
+    document.getElementById("resetbtn").style.display="none";
+  }
+
 }
 
 function toEto(year) {
