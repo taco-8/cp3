@@ -72,7 +72,7 @@
                 <p id="ename"></p>
 
                 <img id="mypic">
-
+                <br><br>
                 <div id='resetbtn' style='display:none;'>
                 <button type="button" class="btn btn-outline-dark" onclick='reload();'>
                 今年</button>
