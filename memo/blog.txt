@@ -1,8 +1,8 @@
 img
 
-<img src="/img/2020/2020-02-01_1.png" style="width: 100%;" />
+<img src="../../img/2020/2020-02-01_1.png" style="width: 100%;" />
 
-<img src="/img/2020/2020-02-01_1.png" style="width: 100%; border: 1px solid #6c757d;" />
+<img src="../../img/2020/2020-02-01_1.png" style="width: 100%; border: 1px solid #6c757d;" />
 
 C:\xampp\htdocs\cp3\webroot\img\2020\2020-02-01_1.png
 
