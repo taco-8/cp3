@@ -71,6 +71,7 @@
                 <br>
                 <p id="ename"></p>
 
+                <img id="mypic">
 
                 <div id='resetbtn' style='display:none;'>
                 <button type="button" class="btn btn-outline-dark" onclick='reload();'>
@@ -111,6 +112,9 @@ function reload(){
 function chyear(){
   var year = $('[name=year]').val();
   document.getElementById("ename").innerHTML = toEto(year);
+
+  var pics_src = new Array("eto_01.png","eto_02.png","eto_03.png","eto_04.png","eto_05.png","eto_06.png","eto_07.png","eto_08.png","eto_09.png","eto_10.png","eto_11.png","eto_12.png");
+  document.getElementById("mypic").src="./img/eto/"+pics_src[year % 12];
 
   var cyear = '<?=$currentyear ?>';
   if(year != cyear){
