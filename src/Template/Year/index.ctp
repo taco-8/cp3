@@ -13,7 +13,7 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   
-  <title><?=$titleyear ?></title>
+  <title><?=$titleyear ?> 西暦和暦リスト</title>
 
   <!-- Custom styles for this template
   <link href="style.css" rel="stylesheet">
