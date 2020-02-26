@@ -50,33 +50,42 @@
 
   <main role="main">
 
-        <div class="jumbotron jumbotronwhite">
-            <div class="container">
-                <i class="fa fa-calendar" aria-hidden="true"></i>
-                <small><?php echo date('Y-m-d',  strtotime($entity->date)); ?></small>
-                <br><br>
-                <h1 class='htitle'><?=$entity->title ?></h1>
-                <br>
-                <?=$entity->content ?>
+    <div class="jumbotron jumbotronwhite">
 
-                <br><br>
+      <div class="container">
 
-                <div class="form_conf">
+        <div class="row">
+          <div class="col-md-7">
 
-                <a class="btn btn-outline-dark" 
-                    href="javascript:back();"
-                    role="button">&laquo; 一覧に戻る</a>
-                
-                  <a class="btn btn-outline-dark" 
-                    href="<?=$this->Url->build(['controller'=>'Contact', 'action'=>'index']); ?>?id=<?=h($entity->id) ?>"
-                    role="button">コメント &raquo;</a>
+            <i class="fa fa-calendar" aria-hidden="true"></i>
+            <small><?php echo date('Y-m-d',  strtotime($entity->date)); ?></small>
+            <br><br>
+            <h1 class='htitle'><?=$entity->title ?></h1>
+            <br>
+            <?=$entity->content ?>
 
-                </div>
+            <br><br>
 
-            </div>
-        </div> <!-- /container -->
+            <div class="form_conf">
 
-    </main>
+              <a class="btn btn-outline-dark" 
+                href="javascript:back();"
+                role="button">&laquo; 一覧に戻る</a>
+            
+              <a class="btn btn-outline-dark" 
+                href="<?=$this->Url->build(['controller'=>'Contact', 'action'=>'index']); ?>?id=<?=h($entity->id) ?>"
+                role="button">コメント &raquo;</a>
+
+            </div> <!-- /form_conf -->
+
+          </div> <!-- /col-md-8 -->
+        </div> <!-- /row -->
+
+      </div> <!-- /container -->
+
+    </div> 
+
+  </main>
 
 
 
